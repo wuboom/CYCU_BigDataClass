@@ -22,9 +22,6 @@ sudo chown -R hduser:hadoop $HADOOP_HOME/etc/CYCU_BigDataClass
 sudo mv $HADOOP_HOME/etc/hadoop $HADOOP_HOME/etc/hadoop_bak
 sudo ln -s $HADOOP_HOME/etc/CYCU_BigDataClass/hadoop_multi_nodes/hadoop $HADOOP_HOME/hadoop/etc/hadoop
 
-HADOOP_HOME=/usr/local/hadoop
-HADOOP_HOME_SBIN=$HADOOP_HOME/sbin
-HADOOP_HOME_BIN=$HADOOP_HOME/bin
 sudo su hduser -c $HADOOP_HOME_SBIN/hadoop-daemon.sh start datanode
 sudo su hduser -c $HADOOP_HOME_BIN/hdfs dfsadmin -printTopology
 sudo su hduser -c $HADOOP_HOME_SBIN/yarn-daemon.sh start nodemanager
