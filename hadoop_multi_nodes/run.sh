@@ -17,3 +17,11 @@ sudo git clone  https://github.com/fychao/CYCU_BigDataClass.git /usr/local/hadoo
 sudo chown -R hduser:hadoop /usr/local/hadoop/etc/CYCU_BigDataClass
 sudo mv /usr/local/hadoop/etc/hadoop /usr/local/hadoop/etc/hadoop_bak
 sudo ln -s /usr/local/hadoop/etc/CYCU_BigDataClass/hadoop_multi_nodes/hadoop /usr/local/hadoop/etc/hadoop
+
+HADOOP_HOME=/usr/local/hadoop
+HADOOP_HOME_SBIN=$HADOOP_HOME/sbin
+HADOOP_HOME_BIN=$HADOOP_HOME/bin
+sudo su hduser -c $HADOOP_HOME_SBIN/hadoop-daemon.sh start datanode
+sudo su hduser -c $HADOOP_HOME_BIN/hdfs dfsadmin -printTopology
+sudo su hduser -c $HADOOP_HOME_SBIN/yarn-daemon.sh start nodemanager
+sudo su hduser -c $HADOOP_HOME_BIN/yarn node -list -all
