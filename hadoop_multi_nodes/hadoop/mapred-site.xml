@@ -32,4 +32,76 @@
   # 多人使用情況下，將 .staging 目錄寫到個人的家目錄中 #
   </description>
  </property>
+      <!--
+            請參考實際機器規格進行設定
+            ***** BEGIN *****
+      -->
+     <property>
+      <name>mapred.child.java.opts</name>
+      <value>512</value>
+      <description>
+            工作容器的記憶體數值
+      </description>
+     </property>
+    
+     <property>
+      <name>mapreduce.map.memory.mb</name>
+      <value>512</value>
+      <description>
+            工作容器的記憶體數值
+      </description>
+     </property>
+    
+     <property>
+      <name>mapreduce.reduce.memory.mb</name>
+      <value>1024</value>
+      <description>
+            2 * 工作容器的記憶體數值
+      </description>
+     </property>
+    
+    
+     <property>
+      <name>mapreduce.map.java.opts</name>
+      <value>-Xmx512m</value>
+      <description>
+            工作容器的記憶體數值 | 寫法一定要 -Xmx???m
+      </description>
+     </property>
+    
+     <property>
+      <name>mapreduce.reduce.java.opts</name>
+      <value>-Xmx1024m</value>
+      <description>
+            2 * 工作容器的記憶體數值 | 寫法一定要 -Xmx???m
+      </description>
+     </property>
+    
+     <property>
+      <name>yarn.app.mapreduce.am.resource.mb</name>
+      <value>1024</value>
+      <description>
+            2 * 工作容器的記憶體數值
+      </description>
+     </property>
+    
+     <property>
+      <name>yarn.app.mapreduce.am.command-opts</name>
+      <value>-Xmx1024m</value>
+      <description>
+            2 * 工作容器的記憶體數值 | 寫法一定要 -Xmx???m
+      </description>
+     </property>
+     
+     <property>
+      <name>mapreduce.task.io.sort.mb</name>
+      <value>32</value>
+      <description>
+            記憶體設定越大就越大，如：32, 64, 128, 256, 512
+      </description>
+     </property>
+      <!--
+            ***** END *****
+            請參考實際機器規格進行設定
+      --> 
 </configuration>

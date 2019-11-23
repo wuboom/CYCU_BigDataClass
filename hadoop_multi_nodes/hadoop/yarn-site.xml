@@ -29,4 +29,85 @@
    <name>yarn.resourcemanager.hostname</name>
    <value>master</value>
  </property>
+
+      <!--
+            記憶體檢查與比例設定
+            ***** BEGIN *****
+      -->
+     <property>
+       <name>yarn.nodemanager.pmem-check-enabled</name>
+        <value>true</value>
+        <description>
+            實體記憶體檢查
+        </description>
+     </property>
+    
+     <property>
+       <name>yarn.nodemanager.vmem-check-enabled</name>
+        <value>false</value>
+        <description>
+            虛擬記憶體檢查
+        </description>
+     </property>
+    
+     <property>
+       <name>yarn.nodemanager.vmem-pmem-ratio</name>
+        <value>2.1</value>
+        <description>
+            實體/虛擬記憶體比例
+        </description>
+      </property>
+      <!--
+            ***** END *****
+            記憶體檢查與比例設定
+      -->
+      
+      <!--
+            請參考實際機器規格進行設定
+            ***** BEGIN *****
+      -->
+      <property>
+        <name>yarn.nodemanager.resource.memory-mb</name>
+        <value>4096</value>
+        <description>
+            工作容器 期待數量 * 各別記憶體數值
+        </description>
+      </property>
+    
+      <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>512</value>
+        <description>
+            工作容器的記憶體數值
+        </description>
+      </property>
+    
+      <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>4096</value>
+        <description>
+            工作容器 期待數量 * 各別記憶體數值
+        </description>
+      </property>
+    
+      <property>
+        <name>yarn.nodemanager.resource.cpu-vcores</name>
+        <value>4</value>
+        <description>
+            實際 CPU 數值，請看 htop 
+        </description>
+      </property>
+    
+      <property>
+        <name>yarn.scheduler.maximum-allocation-vcores</name>
+        <value>4</value>
+        <description>
+            實際 CPU 數值，請看 htop 
+        </description>
+      </property>
+      <!--
+            ***** END *****
+            請參考實際機器規格進行設定
+      -->
+
 </configuration>
