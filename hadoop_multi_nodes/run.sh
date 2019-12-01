@@ -20,9 +20,9 @@ sudo chown -R root:root /usr/local/jdk1.8.0_231
 sudo git clone  https://github.com/fychao/CYCU_BigDataClass.git $HADOOP_HOME/etc/CYCU_BigDataClass
 sudo chown -R hduser:hadoop $HADOOP_HOME/etc/CYCU_BigDataClass
 sudo mv $HADOOP_HOME/etc/hadoop $HADOOP_HOME/etc/hadoop_bak
-sudo ln -s $HADOOP_HOME/etc/CYCU_BigDataClass/hadoop_multi_nodes/hadoop $HADOOP_HOME/hadoop/etc/hadoop
+sudo ln -s $HADOOP_HOME/etc/CYCU_BigDataClass/hadoop_multi_nodes/hadoop $HADOOP_HOME/etc/hadoop
 
-sudo su hduser -c $HADOOP_HOME_SBIN/hadoop-daemon.sh start datanode
-sudo su hduser -c $HADOOP_HOME_BIN/hdfs dfsadmin -printTopology
-sudo su hduser -c $HADOOP_HOME_SBIN/yarn-daemon.sh start nodemanager
-sudo su hduser -c $HADOOP_HOME_BIN/yarn node -list -all
+#sudo su hduser -c $HADOOP_HOME_SBIN/hadoop-daemon.sh start datanode
+#sudo su hduser -c $HADOOP_HOME_BIN/hdfs dfsadmin -printTopology
+#sudo su hduser -c $HADOOP_HOME_SBIN/yarn-daemon.sh start nodemanager
+#sudo su hduser -c $HADOOP_HOME_BIN/yarn node -list -all
