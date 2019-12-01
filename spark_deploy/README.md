@@ -1,5 +1,5 @@
 
-remember to set following variables in `.bashrc`
+remember to set following variables in `.bashrc` in `hduser`
 
 ```bash=
 export SPARK_HOME=/usr/local/spark
