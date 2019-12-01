@@ -29,6 +29,10 @@
    <name>yarn.resourcemanager.hostname</name>
    <value>master</value>
  </property>
+<<<<<<< HEAD
+=======
+
+>>>>>>> fychao/master
       <!--
             記憶體檢查與比例設定
             ***** BEGIN *****
@@ -108,4 +112,4 @@
             ***** END *****
             請參考實際機器規格進行設定
       -->
-</configuration>
+<configuration>
